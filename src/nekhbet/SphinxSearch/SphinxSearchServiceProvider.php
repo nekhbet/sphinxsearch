@@ -1,10 +1,14 @@
-<?php 
+<?php
+
 namespace nekhbet\SphinxSearch;
 
 use Illuminate\Support\ServiceProvider;
 
 class SphinxSearchServiceProvider extends ServiceProvider
 {
+
+    protected $defer = false;
+
     public function register()
     {
         $this->app->singleton('sphinxsearch', function ($app) {
@@ -16,12 +20,8 @@ class SphinxSearchServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            ## Original
-            #__DIR__.'../../../../config/sphinxsearch.php' => config_path('sphinxsearch.php'),
-
-            ## https://github.com/sngrl/sphinxsearch/issues/3
-            __DIR__.'/../../../config/sphinxsearch.php' => config_path('sphinxsearch.php'),
-        ]);
+            __DIR__.'/../../config/sphinxsearch.php' => config_path('sphinxsearch.php'),
+        ], 'config');
     }
 
 }
