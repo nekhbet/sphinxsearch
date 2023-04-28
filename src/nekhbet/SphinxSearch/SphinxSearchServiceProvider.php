@@ -12,7 +12,7 @@ class SphinxSearchServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('sphinxsearch', function ($app) {
-            return new SphinxSearch;
+            return new SphinxSearch();
         });
     }
 
@@ -22,6 +22,13 @@ class SphinxSearchServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../../config/sphinxsearch.php' => config_path('sphinxsearch.php'),
         ], 'config');
+    }
+
+    public function provides()
+    {
+        return [
+            'sphinxsearch',
+        ];
     }
 
 }
