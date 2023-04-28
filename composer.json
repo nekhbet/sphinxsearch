@@ -28,9 +28,9 @@
       "nekhbet\\SphinxSearch": "src/"
     }
   },
+  "minimum-stability": "stable",
   "config": {
     "allow-plugins": {
-      "kylekatarnls/update-helper": true
     }
   }
 }
