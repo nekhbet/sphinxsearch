@@ -28,7 +28,7 @@
       "nekhbet\\SphinxSearch": "src/"
     }
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "config": {
     "allow-plugins": {
     }
