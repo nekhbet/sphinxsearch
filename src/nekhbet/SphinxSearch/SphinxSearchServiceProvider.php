@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 class SphinxSearchServiceProvider extends ServiceProvider
 {
 
-    protected $defer = false;
+    protected bool $defer = false;
 
     public function register()
     {
