@@ -37,6 +37,7 @@
     }
   },
   "minimum-stability": "stable",
+  "type": "laravel-package",
   "config": {
     "allow-plugins": {
     }
