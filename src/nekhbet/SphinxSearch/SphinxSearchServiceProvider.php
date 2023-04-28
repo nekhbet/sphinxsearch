@@ -11,24 +11,25 @@ class SphinxSearchServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->singleton('sphinxsearch', function ($app) {
-            return new SphinxSearch();
-        });
+        //
     }
 
 
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../../config/sphinxsearch.php' => config_path('sphinxsearch.php'),
+            __DIR__.'/../../config/sphinxsearch.php' => $this->config_path('sphinxsearch.php'),
         ], 'config');
     }
 
     public function provides()
     {
-        return [
-            'sphinxsearch',
-        ];
+        return [];
+    }
+
+    private function config_path($path = '')
+    {
+        return function_exists('config_path') ? config_path($path) : app()->basePath().DIRECTORY_SEPARATOR.'config'.($path ? DIRECTORY_SEPARATOR.$path : $path);
     }
 
 }
