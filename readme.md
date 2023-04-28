@@ -1,3 +1,12 @@
+This is a mantained version to the latest Laravel (right now 10.x).
+I'm using it for my personal projects so it will be up-to-date.
+============================
+
+
+Original notes below: 
+
+
+
 Sphinx Search for Laravel 5 - Custom build with snippets support 
 =======================
 Simple Laravel 5 package for make queries to Sphinx Search.
