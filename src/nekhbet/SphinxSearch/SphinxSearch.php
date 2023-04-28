@@ -1,5 +1,5 @@
 <?php 
-namespace sngrl\SphinxSearch;
+namespace nekhbet\SphinxSearch;
 
 class SphinxSearch
 {
@@ -17,11 +17,11 @@ class SphinxSearch
         $host = \Config::get('sphinxsearch.host');
         $port = \Config::get('sphinxsearch.port');
         $timeout = \Config::get('sphinxsearch.timeout');
-        $this->_connection = new \Sphinx\SphinxClient();
+        $this->_connection = new SphinxClient();
         $this->_connection->setServer($host, $port);
         $this->_connection->setConnectTimeout($timeout);
-        $this->_connection->setMatchMode(\Sphinx\SphinxClient::SPH_MATCH_ANY);
-        $this->_connection->setSortMode(\Sphinx\SphinxClient::SPH_SORT_RELEVANCE);
+        $this->_connection->setMatchMode(SphinxClient::SPH_MATCH_ANY);
+        $this->_connection->setSortMode(SphinxClient::SPH_SORT_RELEVANCE);
         if (extension_loaded('mysqli') && \Config::get('sphinxsearch.mysql_server')) {
             $this->_raw_mysql_connection = mysqli_connect(\Config::get('sphinxsearch.mysql_server.host'), '', '', '', \Config::get('sphinxsearch.mysql_server.port'));
         }
