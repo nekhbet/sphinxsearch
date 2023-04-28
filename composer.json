@@ -1,6 +1,6 @@
 {
   "name": "nekhbet/laravel-sphinxsearch",
-  "description": "Laravel package to query SphinxSearch in Laravel",
+  "description": "Laravel package to query SphinxSearch",
   "keywords": [
     "sphinx",
     "sphinxsearch",
@@ -18,6 +18,13 @@
       "email": "trimbitassorin@hotmail.com"
     }
   ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Nekhbet\\SphinxSearch\\SphinxSearchServiceProvider"
+      ]
+    }
+  },
   "require": {
     "php": ">=8.0",
     "ext-mbstring": "*",
@@ -26,7 +33,7 @@
   },
   "autoload": {
     "psr-0": {
-      "nekhbet\\SphinxSearch": "src/"
+      "Nekhbet\\SphinxSearch\\": "src/"
     }
   },
   "minimum-stability": "stable",

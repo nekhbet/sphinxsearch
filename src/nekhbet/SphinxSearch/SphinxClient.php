@@ -1,6 +1,6 @@
 <?php
 
-namespace nekhbet\SphinxSearch;
+namespace Nekhbet\SphinxSearch;
 
 //
 // $Id$
