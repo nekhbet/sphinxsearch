@@ -11,6 +11,13 @@ What I have done:
 - make it work with Sphinx 3.x
 - various fixes
 
+==========================
+
+To install it: 
+```php
+composer require nekhbet/sphinxsearch
+```
+
 
 
 --------------------------------------------
