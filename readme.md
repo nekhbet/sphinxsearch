@@ -1,5 +1,5 @@
 
-This is a maintained version to the latest Laravel (right now 10.x).
+This is a maintained version to the latest Laravel (right now 10.x) and to Sphinx 3.x.
 ============================
 
 I'm using it for my personal projects, so it will be up-to-date.
@@ -8,6 +8,7 @@ I'm using it for my personal projects, so it will be up-to-date.
 What I have done: 
 - got rid of "strage" dependencies and included https://github.com/sphinxsearch/sphinx/blob/master/api/sphinxapi.php here, not on yet another repo
 - tweaks for PHP 8.x
+- make it work with Sphinx 3.x
 - various fixes
 
 
